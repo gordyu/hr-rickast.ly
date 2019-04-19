@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/react/dist/react-with-addons.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/lodash/lodash.js"></script>
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="node_modules/chai/chai.js"></script>
+    <script src="node_modules/sinon/pkg/sinon-server-1.17.3.js"></script>
+    <script src="node_modules/sinon/pkg/sinon-1.17.3.js"></script>
+    <script>
+      mocha.setup('bdd');
+      var expect = chai.expect;
+      $(function() {
+        window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run()
+      });
+    </script>
+
+    <!-- include source files here... -->
+    <script type="module" src="compiled/src/config/youtube.js"></script>
+    <script type="module" src="compiled/src/lib/searchYouTube.js"></script>
+    <script type="module" src="compiled/src/data/exampleVideoData.js"></script>
+    <script type="module" src="compiled/src/components/VideoListEntry.js"></script>
+    <script type="module" src="compiled/src/components/VideoList.js"></script>
+    <script type="module" src="compiled/src/components/VideoPlayer.js"></script>
+    <script type="module" src="compiled/src/components/Search.js"></script>
+    <script type="module" src="compiled/src/components/App.js"></script>
+
+    <!-- include spec files here... -->
+    <script type="module" src="compiled/spec/data/fakeVideoData.js"></script>
+    <script type="module" src="compiled/spec/data/moreFakeVideoData.js"></script>
+    <script type="module" src="compiled/spec/components/Wrapper.js"></script>
+    <script type="module" src="compiled/spec/components/VideoListSpec.js"></script>
+    <script type="module" src="compiled/spec/components/VideoListEntrySpec.js"></script>
+    <script type="module" src="compiled/spec/components/VideoPlayerSpec.js"></script>
+    <script type="module" src="compiled/spec/components/AppSpec.js"></script>
+    <script type="module" src="compiled/spec/lib/searchYouTubeSpec.js"></script>
+    <script type="module" src="compiled/spec/components/SearchSpec.js"></script>
+
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>
